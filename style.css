@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: block;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  scroll-snap-align: start;
+}
+
+.page1 {
+  background: #f66;
+}
+
+.page2 {
+  background: #9cc;
+}
