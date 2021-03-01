@@ -23,8 +23,17 @@ body {
 
 .page1 {
   background: #f66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page2 {
   background: #9cc;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
