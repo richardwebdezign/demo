@@ -1,21 +1,28 @@
 let rendering = false;
 
 let tweens = [
-  (page, position) => {
+  (page, height, box) => {
+    console.log("title");
   },
-  (page, position) => {
+  (page, height, box) => {
   },
-  (page, position) => {
+  (page, height, box) => {
   }
 ];
 
-let scroll = () => {
-  console.log(1);
-};
-
 $(document).ready(() => {
-  let pages = $(".page");
-  $(".wrapper").scroll(() => {
+  let $wrapper = $(".wrapper");
+  let $pages = $(".page");
+  let scroll = () => {
+    let height = $wrapper[0].getBoundingClientRect().height;
+    $pages.each((index, page) => {
+      let box = page.getBoundingClientRect();
+      if ((box.top < height) && (box.bottom > 0))
+        tweens[index](page, height, box);
+    });
+  };
+
+  $wrapper.scroll(() => {
     if (!rendering) {
       window.requestAnimationFrame(() => {
         scroll();
