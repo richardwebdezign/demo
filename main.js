@@ -1,10 +1,15 @@
 let rendering = false;
 
+let playing = false;
+
 let tweens = [
   (page, height, box) => {
-    console.log("title");
   },
   (page, height, box) => {
+    if ((box.top < (height / 2)) && !playing) {
+      $("video")[0].play();
+      playing = true;
+    }
   },
   (page, height, box) => {
   }
