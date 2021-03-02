@@ -14,7 +14,7 @@ let tweens = [
 ];
 
 $(document).ready(() => {
-  if (window.location.hash === "#debug") $("body").addClass("showDebug");
+  if (window.location.hash === "#debug") $(debug).addClass("show");
 
   let $wrapper = $(".wrapper");
   let $pages = $(".page");

@@ -2,12 +2,12 @@ body {
   margin: 0;
 }
 
-.debug {
+#debug {
   position: absolute;
   display: none;
 }
 
-.showDebug .debug {
+#debug.show {
   display: block !important;
 }
 
