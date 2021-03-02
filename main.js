@@ -21,8 +21,10 @@ $(document).ready(() => {
   let $pages = $(".page");
 
   let hash = window.location.hash.slice(1);
-  if (window.location.hash === "#debug") $(debug).addClass("show");
-  else $pages[parseInt(hash)].scrollIntoView();
+  if (hash) {
+    if (window.location.hash === "#debug") $(debug).addClass("show");
+    else $pages[parseInt(hash)].scrollIntoView();
+  }
 
   let $wrapper = $(".wrapper");
   let scroll = () => {
