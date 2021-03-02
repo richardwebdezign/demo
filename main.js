@@ -1,17 +1,15 @@
 let rendering = false;
 
-let playing = false;
-
 let tweens = [
-  (page, height, box) => {
+  (index, page, height, box) => {
   },
-  (page, height, box) => {
-    if ((box.top < (height / 2)) && !playing) {
+  (index, page, height, box) => {
+    if (box.top < (height / 2)) {
       $("video")[0].play();
-      playing = true;
+      tweens[index] = () => {};
     }
   },
-  (page, height, box) => {
+  (index, page, height, box) => {
   }
 ];
 
@@ -23,7 +21,7 @@ $(document).ready(() => {
     $pages.each((index, page) => {
       let box = page.getBoundingClientRect();
       if ((box.top < height) && (box.bottom > 0))
-        tweens[index](page, height, box);
+        tweens[index](index, page, height, box);
     });
   };
 
