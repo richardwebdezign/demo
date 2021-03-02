@@ -50,6 +50,18 @@ video {
   justify-content: space-around;
 }
 
+.page3 img {
+  position: relative;
+}
+
+.firefox {
+  right: 20vh;
+}
+
+.edge {
+  left: 20vh;
+}
+
 .logo {
   height: 20vh;
 }
