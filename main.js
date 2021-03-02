@@ -12,6 +12,7 @@ let tweens = [
   (index, page, height, box) => {
     let scroll = - box.top / height;
     debug.innerHTML = scroll;
+    page.style.setProperty("--scroll", scroll);
   },
   (index, page, height, box) => {
   }
