@@ -10,6 +10,10 @@ let tweens = [
     }
   },
   (index, page, height, box) => {
+    let scroll = - box.top / height;
+    debug.innerHTML = scroll;
+  },
+  (index, page, height, box) => {
   }
 ];
 
