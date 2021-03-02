@@ -2,6 +2,15 @@ body {
   margin: 0;
 }
 
+.debug {
+  position: absolute;
+  display: none;
+}
+
+.showDebug .debug {
+  display: block !important;
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;

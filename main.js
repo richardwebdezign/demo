@@ -14,6 +14,8 @@ let tweens = [
 ];
 
 $(document).ready(() => {
+  if (window.location.hash === "#debug") $("body").addClass("showDebug");
+
   let $wrapper = $(".wrapper");
   let $pages = $(".page");
   let scroll = () => {
