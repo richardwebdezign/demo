@@ -28,6 +28,7 @@ body {
   height: 100vh;
   max-width: 100%;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .page1 {
