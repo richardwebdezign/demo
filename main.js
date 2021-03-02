@@ -18,10 +18,13 @@ let tweens = [
 ];
 
 $(document).ready(() => {
+  let $pages = $(".page");
+
+  let hash = window.location.hash.slice(1);
   if (window.location.hash === "#debug") $(debug).addClass("show");
+  else $pages[parseInt(hash)].scrollIntoView();
 
   let $wrapper = $(".wrapper");
-  let $pages = $(".page");
   let scroll = () => {
     let height = $wrapper[0].getBoundingClientRect().height;
     $pages.each((index, page) => {
