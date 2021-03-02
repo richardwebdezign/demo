@@ -37,12 +37,19 @@ body {
   align-items: center;
 }
 
-.page2 {
-  background: #9cc;
-}
-
 video {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.page3 {
+  background: #9cc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 20vh;
 }
