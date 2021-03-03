@@ -74,7 +74,7 @@ video {
 }
 
 .logo {
-  animation: cubic-bezier(0, .8, 1, .2) roll 1s;
+  animation: linear both roll 1s;
   animation-play-state: paused;
   animation-delay: calc((var(--scroll) * -0.5s) - 0.5s);
   height: 20vh;
