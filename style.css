@@ -65,11 +65,11 @@ video {
 
 @keyframes roll {
   from {
-    transform: translate(-50vw);
+    transform: translate(-100vh);
   }
 
   to {
-    transform: translate(50vw);
+    transform: translate(100vh);
   }
 }
 
