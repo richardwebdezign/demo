@@ -49,18 +49,18 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
-.page3 img {
-  position: relative;
+.logo .circle {
+  height: 20vh;
+  width: 20vh;
 }
 
-.firefox {
-  right: 20vh;
-}
-
-.edge {
-  left: 20vh;
+.logo div {
+  position: absolute;
+  clip-path: circle(50%);
+  z-index: 100;
 }
 
 @keyframes roll {
@@ -74,8 +74,26 @@ video {
 }
 
 .logo {
+  position: relative;
   animation: linear both roll 1s;
   animation-play-state: paused;
   animation-delay: calc((var(--scroll) * -0.5s) - 0.5s);
   height: 20vh;
+  width: 20vh;
+}
+
+.firefox {
+  right: 20vh;
+}
+
+.edge {
+  left: 20vh;
+}
+
+.circle {
+  transition: all 1s;
+}
+
+.active .circle {
+  transform: scale(2, 2);
 }

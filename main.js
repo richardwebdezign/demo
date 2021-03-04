@@ -10,7 +10,6 @@ $(document).ready(() => {
     else if (x > plateauWidth) y = (plateauGradient * x) + plateauOffset;
     return y;
   };
-  console.log(plateau);
 
   let stagger = -(1 / 3);
   let middle = (logos.length - 1) / 2;
@@ -64,4 +63,14 @@ $(document).ready(() => {
       rendering = true;
     }
   });
+
+  $(".logo div")
+    .mouseenter(function() {
+      let parent = $(this).parent();
+      parent.addClass("active");
+      parent.siblings().addClass("inactive");
+    }).mouseleave(function() {
+      $(this).parent().removeClass("active");
+      $(".logo").removeClass("inactive");
+    });
 });
