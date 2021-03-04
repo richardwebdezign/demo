@@ -107,8 +107,8 @@ video {
   position: absolute;
   height: 20vh;
   line-height: 20vh;
-  font-size: 5vw;
-  left: 80vw;
+  font-size: 15vh;
+  left: 120vw;
   transition: all 1s;
 }
 
