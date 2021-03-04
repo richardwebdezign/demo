@@ -96,7 +96,7 @@ video {
 }
 
 .active .circle {
-  transform: scale(2, 2);
+  transform: scale(2, 2) rotate(-30deg);
 }
 
 .inactive .circle {
