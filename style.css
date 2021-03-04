@@ -97,3 +97,7 @@ video {
 .active .circle {
   transform: scale(2, 2);
 }
+
+.inactive .circle {
+  filter: brightness(25%);
+}
