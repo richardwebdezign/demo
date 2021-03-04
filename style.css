@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 #debug {
@@ -99,5 +100,30 @@ video {
 }
 
 .inactive .circle {
-  filter: brightness(25%);
+  filter: brightness(15%);
+}
+
+.logo span {
+  position: absolute;
+  height: 20vh;
+  line-height: 20vh;
+  font-size: 5vw;
+  left: 80vw;
+  transition: all 1s;
+}
+
+.active span {
+  left: 10vw;
+}
+
+.firefox span {
+  color: #216;
+}
+
+.chrome span {
+  color: #018;
+}
+
+.edge span {
+  color: #160;
 }
